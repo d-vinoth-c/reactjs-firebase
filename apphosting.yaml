@@ -1,0 +1,16 @@
+name: reactjs-firebase
+runtime:
+  container:
+    dockerfile: ./Dockerfile
+resources:
+  cpu: 1
+  memory: 512Mi
+startup:
+  timeout: 300s
+  port: 8080
+scaling:
+  minInstanceCount: 0
+  maxInstanceCount: 3
+env:
+  variables:
+    NODE_ENV: production
